@@ -108,12 +108,13 @@ sample3||F4HTPAO05FO0LC Bacteria;Firmicutes;Clostridia;Clost...
 <dd>the log file.</dd>
 </dl>
 <div class="highlight-text"><div class="highlight"><pre>$ micca-otu-denovo --help
-usage: micca-otu-denovo [-h] [-v] [-f {fastq,fasta}] [-s SIMILARITY] [-m SIZE]
-                        [-c] [-d] [-l DEREP_FAST_LEN] [-t {rdp,blast}]
-                        [-o DIR] [--rdp-max-memory MB]
-                        [--rdp-min-confidence CONFIDENCE] [--blast-ref FILE]
-                        [--blast-ref-taxonomy FILE] [--blast-num-threads NUM]
-                        [--blast-e-value VALUE] [--blast-perc-identity PERC]
+usage: micca-otu-denovo [-h] [-v] [-M] [-f {fastq,fasta}] [-s SIMILARITY]
+                        [-m SIZE] [-c] [-d] [-l DEREP_FAST_LEN]
+                        [-t {rdp,blast}] [-o DIR] [--rdp-max-memory MB]
+                        [--rdp-min-confidence CONFIDENCE] [--rdp-gene GENE]
+                        [--blast-ref FILE] [--blast-ref-taxonomy FILE]
+                        [--blast-num-threads NUM] [--blast-e-value VALUE]
+                        [--blast-perc-identity PERC]
                         input [input ...]
 
 micca-otu-denovo performs the OTU clustering the taxonomy assigment. Reads are
@@ -136,6 +137,9 @@ positional arguments:
 optional arguments:
   -h, --help            show this help message and exit
   -v, --version         show program&#39;s version number and exit
+  -M, --merged          the input file is a single fasta/q file where samples
+                        were merged and the sequences ids are in the form
+                        &#39;SAMPLENAME||SEQID&#39;
   -f {fastq,fasta}, --format {fastq,fasta}
                         input file format (default fastq)
   -s SIMILARITY, --similarity SIMILARITY
@@ -161,6 +165,9 @@ Taxonomy assignment with RDP Classifier/Database:
   --rdp-min-confidence CONFIDENCE
                         minimum confidence value to assign taxonomy to a
                         sequence (default 0.8)
+  --rdp-gene GENE       16srrna, fungallsu, fungalits_warcup (RDP classifier
+                        v.2.8 only), fungalits_unite (RDP classifier v.2.8
+                        only) (default 16srrna)
 
 Taxonomy assignment with BLAST:
   --blast-ref FILE      reference sequences in fasta format

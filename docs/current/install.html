@@ -61,8 +61,8 @@ applications.</p>
 <div class="section" id="external-applications">
 <h3>External Applications<a class="headerlink" href="#external-applications" title="Permalink to this headline">¶</a></h3>
 <ul>
-<li><p class="first">SICKLE - A windowed adaptive trimming tool for FASTQ files using
-quality. (<a class="reference external" href="http://github.com/najoshi/sickle">http://github.com/najoshi/sickle</a>)</p>
+<li><p class="first">SICKLE (&gt;=1.29)- A windowed adaptive trimming tool for FASTQ files using
+quality. (<a class="reference external" href="http://github.com/najoshi/sickle/releases">http://github.com/najoshi/sickle/releases</a>)</p>
 </li>
 <li><p class="first">UCHIME - Chimeric sequences detection, public domain version
 (<a class="reference external" href="http://drive5.com/uchime/uchime_download.html">http://drive5.com/uchime/uchime_download.html</a>)</p>
@@ -73,7 +73,7 @@ quality. (<a class="reference external" href="http://github.com/najoshi/sickle">
 <li><p class="first">BLAST+ - The Basic Local Alignment Search Tool
 (<a class="reference external" href="http://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&amp;DOC_TYPE=Download">BLAST+ executables</a>)</p>
 </li>
-<li><p class="first">RDP Classifier (&gt;= 2.6) - Naive Bayesian classifier for taxonomic
+<li><p class="first">RDP Classifier (&gt;=2.6) - Naive Bayesian classifier for taxonomic
 assignments
 (<a class="reference external" href="http://sourceforge.net/projects/rdp-classifier/">http://sourceforge.net/projects/rdp-classifier/</a>). <strong>After the
 installation set the environment variable ``RDPPATH`` by typing</strong>:</p>
@@ -89,7 +89,9 @@ bottom of your <cite>.bashrc</cite> file.</p>
 </li>
 <li><p class="first">T-Coffee - Simple MSA (<a class="reference external" href="http://tcoffee.crg.cat/apps/tcoffee">http://tcoffee.crg.cat/apps/tcoffee</a>)</p>
 </li>
-<li><p class="first">FastTree - Approximately-maximum-likelihood phylogenetic trees
+<li><p class="first">FastTree - Approximately-maximum-likelihood phylogenetic trees.
+** Download and install the binary or source from the website,
+do not use the package manager of your OS (e.g. apt-get install fasttree)**
 (<a class="reference external" href="http://www.microbesonline.org/fasttree/">http://www.microbesonline.org/fasttree/</a>)</p>
 </li>
 </ul>
@@ -105,7 +107,7 @@ bottom of your <cite>.bashrc</cite> file.</p>
 <li>cutadapt (<a class="reference external" href="https://code.google.com/p/cutadapt/">https://code.google.com/p/cutadapt/</a>)</li>
 <li>DendroPy (<a class="reference external" href="http://pythonhosted.org/DendroPy/">http://pythonhosted.org/DendroPy/</a>)</li>
 </ul>
-<p>The easiest way to install the Python dependences is by using pip:</p>
+<p>The easiest way to install the Python dependencies is by using pip:</p>
 <div class="highlight-python"><pre>$ pip install numpy scipy matplotlib pandas biopython cutadapt dendropy</pre>
 </div>
 </div>
@@ -120,8 +122,21 @@ bottom of your <cite>.bashrc</cite> file.</p>
 <div class="highlight-sh"><div class="highlight"><pre><span class="nv">$ </span>sudo python setup.py install
 </pre></div>
 </div>
-<p>If all the required software is installed, at the end of
-installation you should see something like this:</p>
+</li>
+<li><p class="first">If you don&#8217;t have root access, installing micca in a local
+directory by specifying the <tt class="docutils literal"><span class="pre">--prefix</span></tt> argument. Then you need to
+set <tt class="docutils literal"><span class="pre">PYTHONPATH</span></tt>:</p>
+<div class="highlight-sh"><div class="highlight"><pre><span class="nv">$ </span>python setup.py install --prefix<span class="o">=</span>/path/to/modules
+<span class="nv">$ </span><span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:/path/to/modules/lib/python<span class="o">{</span>version<span class="o">}</span>/site-packages
+</pre></div>
+</div>
+</li>
+<li><p class="first">Test the installation. From the command line run:</p>
+<div class="highlight-sh"><div class="highlight"><pre><span class="nv">$ </span>micca-test
+</pre></div>
+</div>
+<p>If all the required software is installed, you should see something like
+this:</p>
 <div class="highlight-python"><pre>Checking for dependencies...
 DNACLUST... OK
 BLAST+... OK
@@ -139,14 +154,6 @@ DendroPy... OK
 NumPy... OK
 pandas... OK
 RDP Classifier... OK</pre>
-</div>
-</li>
-<li><p class="first">If you don&#8217;t have root access, installing micca in a local
-directory by specifying the <tt class="docutils literal"><span class="pre">--prefix</span></tt> argument. Then you need to
-set <tt class="docutils literal"><span class="pre">PYTHONPATH</span></tt>:</p>
-<div class="highlight-sh"><div class="highlight"><pre><span class="nv">$ </span>python setup.py install --prefix<span class="o">=</span>/path/to/modules
-<span class="nv">$ </span><span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:/path/to/modules/lib/python<span class="o">{</span>version<span class="o">}</span>/site-packages
-</pre></div>
 </div>
 </li>
 </ol>

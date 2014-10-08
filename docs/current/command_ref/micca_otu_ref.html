@@ -60,8 +60,8 @@ with the reference picking protocol. Reads are clustered against an
 external reference. Reads which do not hit a sequence in the reference
 are excluded.</p>
 <div class="highlight-text"><div class="highlight"><pre>$ micca-otu-ref --help
-usage: micca-otu-ref [-h] [-v] [-f {fastq,fasta}] [-s SIMILARITY] --ref FILE
-                     --ref-taxonomy FILE [-o DIR]
+usage: micca-otu-ref [-h] [-v] [-M] [-f {fastq,fasta}] [-s SIMILARITY] --ref
+                     FILE --ref-taxonomy FILE [-o DIR]
                      input [input ...]
 
 micca-otu-ref builds the OTU table and performs the taxonomy assigment with the
@@ -74,6 +74,9 @@ positional arguments:
 optional arguments:
   -h, --help            show this help message and exit
   -v, --version         show program&#39;s version number and exit
+  -M, --merged          the input file is a single fasta/q file where samples
+                        were merged and the sequences ids are in the form
+                        &#39;SAMPLENAME||SEQID&#39;
   -f {fastq,fasta}, --format {fastq,fasta}
                         input file format (default fastq)
   -s SIMILARITY, --similarity SIMILARITY

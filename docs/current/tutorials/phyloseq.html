@@ -70,8 +70,7 @@ define the following function or import the file <tt class="docutils literal"><s
 
 import_micca <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>otufilename<span class="o">=</span><span class="kc">NULL</span><span class="p">,</span> taxonomyfilename<span class="o">=</span><span class="kc">NULL</span><span class="p">,</span>
                         samplefilename<span class="o">=</span><span class="kc">NULL</span><span class="p">,</span> treefilename<span class="o">=</span><span class="kc">NULL</span><span class="p">)</span> <span class="p">{</span>
-    rank <span class="o">=</span> c<span class="p">(</span><span class="s">&quot;Kingdom&quot;</span><span class="p">,</span> <span class="s">&quot;Phylum&quot;</span><span class="p">,</span> <span class="s">&quot;Class&quot;</span><span class="p">,</span> <span class="s">&quot;Order&quot;</span><span class="p">,</span> <span class="s">&quot;Family&quot;</span><span class="p">,</span> <span class="s">&quot;Genus&quot;</span><span class="p">,</span>
-        <span class="s">&quot;Species&quot;</span><span class="p">)</span>
+    rank <span class="o">=</span> c<span class="p">(</span><span class="s">&quot;Kingdom&quot;</span><span class="p">,</span> <span class="s">&quot;Phylum&quot;</span><span class="p">,</span> <span class="s">&quot;Class&quot;</span><span class="p">,</span> <span class="s">&quot;Order&quot;</span><span class="p">,</span> <span class="s">&quot;Family&quot;</span><span class="p">,</span> <span class="s">&quot;Genus&quot;</span><span class="p">,</span> <span class="s">&quot;Species&quot;</span><span class="p">)</span>
     argumentlist <span class="o">=</span> list<span class="p">()</span>
     <span class="kr">if</span> <span class="p">(</span><span class="o">!</span>is.null<span class="p">(</span>otufilename<span class="p">))</span> <span class="p">{</span>
         otu_frame <span class="o">=</span> read.csv<span class="p">(</span>otufilename<span class="p">,</span> sep<span class="o">=</span><span class="s">&quot;\t&quot;</span><span class="p">,</span> header<span class="o">=</span><span class="k-Variable">T</span><span class="p">,</span> row.names<span class="o">=</span><span class="m">1</span><span class="p">,</span>
@@ -113,7 +112,7 @@ import_micca <span class="o">=</span> <span class="kr">function</span><span clas
 source<span class="p">(</span><span class="s">&quot;micca2ps.R&quot;</span><span class="p">)</span>
 ps <span class="o">=</span> import_micca<span class="p">(</span>otufilename<span class="o">=</span><span class="s">&quot;otu_rdp/otu_table.txt&quot;</span><span class="p">,</span>
                   taxonomyfilename<span class="o">=</span><span class="s">&quot;otu_rdp/taxonomy.txt&quot;</span><span class="p">,</span>
-                  treefilename<span class="o">=</span><span class="s">&quot;phylo_pynast/tree_rooted.tre&quot;</span><span class="p">)</span>
+                      treefilename<span class="o">=</span><span class="s">&quot;phylo_pynast/tree_rooted.tre&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

@@ -57,8 +57,8 @@
 <h1><tt class="docutils literal"><span class="pre">micca-preproc-check</span></tt><a class="headerlink" href="#micca-preproc-check" title="Permalink to this headline">¶</a></h1>
 <p>Tries different combinations of length and quality thresholds.</p>
 <div class="highlight-text"><div class="highlight"><pre>$ micca-preproc-check --help
-usage: micca-preproc-check [-h] [-v] [-f PRIMER] [-r PRIMER] [-e RATE]
-                           [-O LENGTH] [-q QUALITY [QUALITY ...]]
+usage: micca-preproc-check [-h] [-v] [-F FORMAT] [-f PRIMER] [-r PRIMER]
+                           [-e RATE] [-O LENGTH] [-q QUALITY [QUALITY ...]]
                            [-l LENGTH [LENGTH ...]]
                            input output
 
@@ -67,12 +67,14 @@ quality thresholds.
 
 positional arguments:
   input                 input fastq file(s)
-  output                output image file (.png, .pdf, .ps, .eps, .svg). The
-                        image type is autodetected from the file extension
+  output                output image filename.
 
 optional arguments:
   -h, --help            show this help message and exit
   -v, --version         show program&#39;s version number and exit
+  -F FORMAT, --format FORMAT
+                        output image formatfile (png, pdf, ps, eps, svg)
+                        (default png)
   -f PRIMER, --primer-forward PRIMER
                         remove forward primer sequences and discard untrimmed
                         reads

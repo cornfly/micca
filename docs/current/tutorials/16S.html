@@ -103,7 +103,7 @@ to check.</p>
 <p>The length threshold 200 and quality threshold 16 values (black point)
 are selected as a compromise between quality filtering and minimum
 reads length.</p>
-<p>Using the choosed parameters, run the following command on all the
+<p>Using the chosen parameters, run the following command on all the
 samples:</p>
 <div class="highlight-sh"><div class="highlight"><pre><span class="nv">$ </span>micca-preproc *.fastq -f AGGATTAGATACCCTGGTA
   -r GTCGTCAGCTCGTGYYG -o preprocessed
@@ -157,8 +157,9 @@ sample3||F4HTPAO05FO0LC 2       6       6
 </dd>
 <dt><strong>representatives.fasta</strong></dt>
 <dd><p class="first">a FASTA file containing the representative sequence for each OTU:</p>
-<div class="last highlight-python"><pre>&gt;sample1||F4HTPAO07H4B1Q
-GTCCACGCCGTAAACGGTGGATGCTGGATGTGGGGCCCGTTCCACGGGTTCCGTGTCGGA
+<div class="highlight-python"><pre>&gt;sample1||F4HTPAO07H4B1Q</pre>
+</div>
+<p class="last">GTCCACGCCGTAAACGGTGGATGCTGGATGTGGGGCCCGTTCCACGGGTTCCGTGTCGGA
 GCTAACGCGTTAAGCATCCCGCCTGGGGAGTACGGCCGCAAGGCTAAAACTCAAAGAAAT
 TGACGGGGCCCGCACAAGCGGCGGAGCATGCGGATTAATTCGATGCAACGCGAAGAACCT
 TACCTGGGCTTGACATGTTCCCGACGGTCGTAGAGATACGGCTTCCCTTCGGGGCGGGTT
@@ -169,8 +170,7 @@ AAACGCAGTAAGTATTCCACCTGGGGAGTACGTTCGCAAGAATGAAACTCAAAGGAATTG
 ACGGGGACCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTT
 ACCAAGTCTTGACATCCTTCTGACCGGTACTTAACCGTACCTTCTCTTCGGAGCAGGAGT
 GACAGGTGGTGCATGGTT
-...</pre>
-</div>
+...</p>
 </dd>
 <dt><strong>taxonomy.txt</strong></dt>
 <dd><p class="first">a two-columns, tab-delimited file containing the taxonomy assigned
@@ -208,7 +208,7 @@ form:</p>
 <p>The command will be:</p>
 <div class="highlight-sh"><div class="highlight"><pre>micca-otu-denovo preprocessed/*.fastq -c -t blast -o otu_rdp <span class="se">\</span>
     --blast-ref greengenes_2013_05/rep_set/97_otus.fasta <span class="se">\</span>
-    --blast-ref-taxonomy greengenes_2013_05/taxonomy/97_otu_taxonomy.txt
+        --blast-ref-taxonomy greengenes_2013_05/taxonomy/97_otu_taxonomy.txt
 </pre></div>
 </div>
 </div>
@@ -280,7 +280,7 @@ National Academy of Sciences, 2010.</td></tr>
                         title="previous chapter">Tutorials</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="phyloseq.html"
-                        title="next chapter">Importing micca outputs in R and <tt class="docutils literal docutils literal"><span class="pre">phyloseq</span></tt></a></p>
+                        title="next chapter">Importing micca outputs in R and <tt class="docutils literal"><span class="pre">phyloseq</span></tt></a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../_sources/tutorials/16S.txt"
